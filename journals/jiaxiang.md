@@ -1,13 +1,13 @@
 Payment Page Output with validation form checking
-![1](images/1.png)
-![1](images/2.png)
+![1](sp21-172-enterprise-spartans/images/1.png)
+![1](sp21-172-enterprise-spartans/images/2.png)
 <br><br/>
 It is succesfully process the payment.
-![1](images/9.png)
+![1](sp21-172-enterprise-spartans/mages/9.png)
 <br><br/>
 This is the detail of the payment transation on CyberSource.
-![1](images/10.png)
-![1](images/11.png)
+![1](sp21-172-enterprise-spartans/images/10.png)
+![1](sp21-172-enterprise-spartans/images/11.png)
 <br><br/>
 This payment api is finished and ready to be applied
 
