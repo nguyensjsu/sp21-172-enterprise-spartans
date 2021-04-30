@@ -1,3 +1,5 @@
+Week 1:<br><br/>
+
 Payment Page Output with validation form checking
 ![1](images/1.png)
 ![1](images/2.png)
@@ -23,7 +25,7 @@ Code to control the validation form.
         Pattern pattern4 = Pattern.compile("\\d{4}");
         Matcher matcher4= pattern4.matcher(command.getexpyear());
         
-        /* Render View */
+        /* Render View 
         model.addAttribute( "message", "Thank you for your payment" ) ;
 
         if (!matcher.matches()) {
@@ -51,3 +53,43 @@ Code to control the validation form.
             System.out.println("The Expiration Year is invalid");
             return "creditcards";
         }
+        */
+        
+ Week 2:<br><br/>
+ In this week, I didn't write too many code because I focused on studying how to connect the backend and forntend using MySQL and Spring framework. Mnay research has been done. and ready to implement code next week after finishing lab8 and lab9.
+ 
+ <br><br/>
+ Udated code for validationform
+  <br><br/>
+         boolean hasErrors = false;
+        if( command.firstname().equals("") )  { hasErrors = true ; msgs.add("Frist Name Required");}
+        if( command.lastname().equals("") )   { hasErrors = true ; msgs.add("Last Name Required");}
+        if( command.address().equals("") )    { hasErrors = true ; msgs.add("Address Required");}
+        if( command.city().equals("") )       { hasErrors = true ; msgs.add("City Required");}
+        if( command.state().equals("") )      { hasErrors = true ; msgs.add("State Required");}
+        if( command.zip().equals("") )        { hasErrors = true ; msgs.add("Zip Required");}
+        if( command.phone().equals("") )      { hasErrors = true ; msgs.add("Phone Required");}
+        if( command.cardnum().equals("") )    { hasErrors = true ; msgs.add("Credit Card Number Required");}
+        if( command.expmon().equals("") )     { hasErrors = true ; msgs.add("Credit Card Expiration Month Required");}
+        if( command.expyear().equals("") )    { hasErrors = true ; msgs.add("Credit Card Expiration Year Required");}
+        if( command.cvv().equals("") )        { hasErrors = true ; msgs.add("Credit Card CVV Required");}
+        if( command.email().equals("") )      { hasErrors = true ; msgs.add("Email Address Required");}
+
+        if( !command.zip().matches("\\d{5}") )                               { hasErrors = true ; msgs.add("Invalid Zip code: "+ command.zip());}
+        if( !command.phone().matches("[(]\\d{3}[)] \\d{3}-\\d{4}") )         { hasErrors = true ; msgs.add("Invalid Phone Number code: "+ command.phone());}
+        if( !command.cardnum().matches("\\d{4}-\\d{4}-\\d{4}-\\d{4}") )      { hasErrors = true ; msgs.add("Invalid Card Number: "+ command.cardnum());}
+        if( !command.expyear().matches("\\d{4}") )                           { hasErrors = true ; msgs.add("Invalid Card Expiration Year: "+ command.expyear());}
+        if( !command.cvv().matches("\\d{3}") )                               { hasErrors = true ; msgs.add("Invalid Card CVV: "+ command.cvv());}
+
+        if ( months.get( command.expmon()) == null ) { hasErrors = true ; msgs.add("Invalid Card Expiration Month:" + command.expmon());}
+
+        if ( states.get( command.state()) == null ) { hasErrors = true ; msgs.add("Invalid State:" + command.state());}
+
+        if(hasErrors) {
+           msgs.print();
+           model.addAttribute( "messages", msgs.getMessages());
+           return "creditcards";
+        }
+ 
+ 
+
