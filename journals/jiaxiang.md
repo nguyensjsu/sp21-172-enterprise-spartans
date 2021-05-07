@@ -92,4 +92,15 @@ Code to control the validation form.
         }
  
  
+ WEEK 3：
+  - Implemented and deployed the Card API to project.
+
+  - Implemented and deployed the Order API to project. 
+  
+  - Creating Mysql Database to connect the project
+    <br><br/>
+  ![1](images/3.png)
+  
+  This image shows card and order api is done.
+ 
 
