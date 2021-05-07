@@ -5,6 +5,10 @@
 
 This week I completed the REST API integration, and began including the Kong API as well. We have scheduled a meeting this weekend to finalize the work remaining and select which kinds of tools/frameworks we intend to use. 
 
+Here is the attached screenshot for the commits this week:
+![alt text](images/week3comm.png)
+
+
 <br><br/>
 
 ## Week 2
