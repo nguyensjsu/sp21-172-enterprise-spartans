@@ -82,6 +82,9 @@ class StarbucksCardController {
     @PostMapping("/card/activate/{num}/{code}")
     StarbucksCard activate(@PathVariable String num, @PathVariable String code, HttpServletResponse response) {
         StarbucksCard card = repository.findByCardNumber(num);
+        System.out.println(num);
+        System.out.println(card);
+
         if (card == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Error--Card not found");
         }
