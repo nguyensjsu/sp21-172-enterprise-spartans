@@ -11,4 +11,10 @@ This week we had a team meeting where we discussed different areas to work. We w
 
 
 
+## Week 2 and Week 3
 
+Snapshot of Task Board: 
+
+![snapshot-w2-sp](images/snapshot-w2-sp.png)
+
+Over the past two weeks, I had the chance of working on the simple front-end prototype for the cashier's app. I developed a low-fidelity prototype and created a spring project with necessary dependencies, including the spring security. I explored different database to be used for the cashiers app like MongoDB, Reddis, and MySQL. Upon developing the entire project, I navigated resources and tested adding Single Sign-On with Spring Boot & Okta. I had few challenges in setting up the controller and model which I will be working on over the next week. Once this is done, I will be adding Cybersource payments processing that we used in one of the previous labs. 
