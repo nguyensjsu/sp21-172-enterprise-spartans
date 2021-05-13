@@ -1,5 +1,9 @@
 # CMPE 172 Project Journal
 
+## Week 4
+
+<br><br/>
+
 ## Week 3
 ![alt text](images/week3.png)
 
