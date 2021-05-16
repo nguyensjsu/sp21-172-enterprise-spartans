@@ -29,7 +29,7 @@ public class CardController {
 	@GetMapping("/")
 	public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
 		model.addAttribute("name", name);
-		return "home";
+		return "login";
 	}
 
 	//check the api's working correctly api
