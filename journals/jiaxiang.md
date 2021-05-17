@@ -102,5 +102,53 @@ Code to control the validation form.
   ![1](images/3.png)
   
   This image shows card and order api is done.
+  <br><br/><br><br/>
+  WEEK 4：
+  <br><br/>
+  - waiting for group members to finish front-end page for cashier app
+
+  - implemented and updated Card and Order API.
+  
+  - creating deploying file tfor the project to deploy on google cloud
+ 
+ Code to update Card and Order api:<br><br/>
+ 
+ 	//get all the starbuck cards api
+	@RequestMapping(value="/getcards", method=RequestMethod.GET)
+	@ResponseBody
+	public List<Cards> getAllStarBucksCards() {
+		return cardServiceImpl.getAllStarbucksCards();
+	}
+
+	//Submit the starbuck card api
+	@RequestMapping(value="/newcard", method=RequestMethod.POST)
+	@ResponseBody
+	public String createStarbucksCard(Cards cards) {
+		return cardServiceImpl.postStarbucksCard(cards);
+	}
+
+	//find the starbucks card api 
+	@RequestMapping(value="/findcard", method = RequestMethod.GET)
+	@ResponseBody
+	public Cards findStarbucksCard(@RequestParam("cardnumber") String cardNumber) {
+		System.out.println(cardNumber);
+		return cardServiceImpl.getSpecificStarbucksCard(cardNumber);
+	}
+
+	//Activate starbuck card api
+	@RequestMapping(value="/card/activate", method=RequestMethod.POST)
+	@ResponseBody
+	public String activateStarbucksCard(@RequestParam("cardnumber") String cardNumber, @RequestParam("code") int code) {
+		return cardServiceImpl.activateStarbucksCardTrue(cardNumber, code);
+	}
+
+	//delete all the starbucks records
+	@RequestMapping(value="/cards", method = RequestMethod.DELETE)
+	@ResponseBody
+	public void deleteAllCards(){
+		cardServiceImpl.deleteStarbucksCards();
+	}
+
+  
  
 
