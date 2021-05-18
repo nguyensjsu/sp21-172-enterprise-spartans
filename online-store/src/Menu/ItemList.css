@@ -11,9 +11,10 @@
 }
 
 .container {
+    display: flex;
     padding-top: 30px;
+    padding-bottom: 30px;
     background-color: #34813b;
-    height: 110px;
     color: white;
     vertical-align: center;
     letter-spacing: 1px;
