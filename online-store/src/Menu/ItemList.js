@@ -13,7 +13,7 @@ function ItemList() {
                 <h1>Menu</h1>
             </div>
             <div className="title">
-                <h2>Drinks</h2>
+                <h2>Coffee</h2>
             </div>
             <div className="wrapper">
                 <ArrowBackIos className="arrow" />

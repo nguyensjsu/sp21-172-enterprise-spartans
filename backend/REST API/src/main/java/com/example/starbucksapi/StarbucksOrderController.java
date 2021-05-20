@@ -13,12 +13,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.lang.Nullable;
 
+@RequestMapping("/api")
 @RestController
 public class StarbucksOrderController {
     private final StarbucksOrderRepository repository;
@@ -92,7 +94,6 @@ public class StarbucksOrderController {
                 price = 3.65;
                 break;
             case "Venti":
-            case "Your Own Cup":
                 price = 3.95;
                 break;
             default:
@@ -108,7 +109,6 @@ public class StarbucksOrderController {
                 price = 2.65;
                 break;
             case "Venti":
-            case "Your Own Cup":
                 price = 2.95;
                 break;
             default:
@@ -124,7 +124,6 @@ public class StarbucksOrderController {
                 price = 4.15;
                 break;
             case "Venti":
-            case "Your Own Cup":
                 price = 4.45;
                 break;
             default:
@@ -139,6 +138,9 @@ public class StarbucksOrderController {
             case "Tall":
                 price = 1.95;
                 break;
+            case "Venti":
+                price = 4.45;
+                break;
             default:
                 throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid size!");
             }
@@ -152,7 +154,6 @@ public class StarbucksOrderController {
                 price = 3.65;
                 break;
             case "Venti":
-            case "Your Own Cup":
                 price = 3.95;
                 break;
             default:

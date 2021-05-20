@@ -18,18 +18,18 @@ class App extends Component {
 
   state = {
     isLoading: true,
-    cards: []
+    orders: []
   };
 
   async componentDidMount() {
-    const response = await fetch('/api/cards');
+    const response = await fetch('/api/orders');
     const body = await response.json();
-    this.setState({ cards: body, isLoading: false });
+    this.setState({ orders: body, isLoading: false });
   }
 
   render() {
 
-    const { cards, isLoading } = this.state;
+    const { orders, isLoading } = this.state;
 
     if (isLoading) {
       return <p>Loading...</p>;
@@ -41,9 +41,9 @@ class App extends Component {
           <Switch>
             <Route exact path="/">
               <Header></Header>
-              {cards.map(card =>
-                <div key={card.id}>
-                  {card.cardNumber}
+              {orders.map(order =>
+                <div key={order.id}>
+                  {order.total}
                 </div>
               )}
               <Home></Home>
