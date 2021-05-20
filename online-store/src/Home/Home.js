@@ -45,15 +45,15 @@ function Home() {
             </Fade>
             <Fade>
                 <div className="third">
-
+                    <text className="second1">
+                        It's our Birthday!
+                        </text>
+                    <text className="second2">
+                        This year, we wanted to celebrate it differently. Instead of asking for gifts, we're giving them away! Participate in our Starbucks bingo at any of our locations to win a $5 gift card
+                        </text>
                 </div>
             </Fade>
-            <Fade>
-                <div className="fourth">
-
-                </div>
-            </Fade>
-        </div>
+        </div >
     );
 }
 
