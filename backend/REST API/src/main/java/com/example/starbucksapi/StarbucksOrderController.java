@@ -145,7 +145,7 @@ public class StarbucksOrderController {
                 throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid size!");
             }
             break;
-        case "Cppuuccino":
+        case "Capuccino":
             switch (order.getSize()) {
             case "Tall":
                 price = 2.95;

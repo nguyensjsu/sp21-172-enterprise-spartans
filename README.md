@@ -8,3 +8,9 @@
     4. Miguel Gonzalez -
 
 ## Project Description 
+
+
+## Online Store Architecture Diagram
+
+![architecture diagram](images/arch.png)
+

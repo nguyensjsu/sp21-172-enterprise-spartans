@@ -5,6 +5,7 @@ import Header from './Home/Header/Header.js'
 import MenuScreen from './Menu/MenuScreen.js';
 import RewardsScreen from './Rewards/RewardsScreen.js';
 import GiftScreen from './Gifts/GiftScreen.js';
+import { Button } from 'react-bootstrap';
 import Footer from './Home/Footer/Footer.js';
 
 import {
@@ -13,6 +14,7 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
+import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider';
 
 class App extends Component {
 
@@ -27,9 +29,22 @@ class App extends Component {
     this.setState({ orders: body, isLoading: false });
   }
 
+  async addOrder(id) {
+    const requestOptions = {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ drink: "Espresso", milk: "Whole", size: "Tall" })
+    };
+    const r = await fetch(`/api/order/register/${id}`, requestOptions);
+    const body = await r.json();
+    this.setState({ result: body, isLoading: false });
+  }
+
+
+
   render() {
 
-    const { orders, isLoading } = this.state;
+    const { orders, results, isLoading } = this.state;
 
     if (isLoading) {
       return <p>Loading...</p>;
@@ -41,11 +56,13 @@ class App extends Component {
           <Switch>
             <Route exact path="/">
               <Header></Header>
-              {orders.map(order =>
-                <div key={order.id}>
-                  {order.total}
-                </div>
-              )}
+              {
+                //orders.map(order =>
+                //<div key={order.id}>
+                //  {order.total}
+                //</div>
+                //)
+              }
               <Home></Home>
               <Footer></Footer>
             </Route>
@@ -61,6 +78,13 @@ class App extends Component {
             </Route>
             <Route exact path="/rewards">
               <Header></Header>
+              {
+                //orders.map(order =>
+                //<div key={order.id}>
+                //  {order.total}
+                //</div>
+                //)
+              }
               <RewardsScreen />
               <Footer></Footer>
             </Route>

@@ -1,6 +1,7 @@
 import itemList from './itemList.json';
 import { Link } from 'react-router-dom';
 import Item from './Item.js';
+import Order from './Item.js';
 import './ItemList.css';
 import ArrowForwardIos from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
@@ -21,7 +22,7 @@ function ItemList() {
                     <div className='item'>
                         {itemList.map((itemCategory) =>
                             itemCategory.drinks.map(({ type, path, image }) => (
-                                <Item type={type} image={image} />
+                                <Order type={type} image={image} />
                             ))
                         )}
                     </div>
