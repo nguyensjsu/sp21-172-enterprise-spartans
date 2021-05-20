@@ -34,3 +34,18 @@ The menu screen provides with a list of items that are clickable, and currently 
 ![architecture diagram](images/arch.png)
 
 The connections between services and renders is in place, but not fully implemented. While developing the front-end all the button functions were missing to be integrated. However, the API connection to the database allows us to perform requests through coded functions —— we would just be missing the integration of this functions to the right UI components. 
+
+### To Run:
+
+From our source project directory:
+
+- To initialize back end
+     cd backend/REST\ API/  && gradle bootRun
+
+![5](images/5.png)
+
+
+- To start front end
+    cd online-store && yarn start
+
+![6](images/6.png)
