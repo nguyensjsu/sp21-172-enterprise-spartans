@@ -1,13 +1,11 @@
 # CMPE 172 Project Journal
 
-## Week 4
+## Week 3 and 4
 
-<br><br/>
-
-## Week 3
 ![alt text](images/week3.png)
 
-This week I completed the REST API integration, and began including the Kong API as well. We have scheduled a meeting this weekend to finalize the work remaining and select which kinds of tools/frameworks we intend to use. 
+This week I completed the REST API integration, and began including the Kong API as well. We have scheduled a meeting this weekend to finalize the work remaining and select which kinds of tools/frameworks we intend to use.
+I also implemented part of the front end for the online store.  
 
 Here is the attached screenshot for the commits this week:
 ![alt text](images/week3comm.png)
