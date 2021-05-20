@@ -8,7 +8,6 @@
     
 
 ## Project Description 
-<br><br/>
 
 ## Online Store
 
