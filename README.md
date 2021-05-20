@@ -106,6 +106,21 @@ mysql --password
 
 <br>
 
+### Spring Okta Authentication 
+
+We set up a Okta Developers account and registered our app with the account. It generated ourr an issuer, client ID, and a secret key.
+
+We tried to implement Okta Authentication for our starbucks project. However, we were not able to integrate Spring Okta project with our Starbucks Project due to spring version and dependencies. 
+
+Here's a test run of Okta implementation. 
+
+![okta-1](images/okta-1-sp.png)
+
+![okta-2](images/okta-2-sp.png)
+
+
+<br>
+
 ### API Testing 
 
 
