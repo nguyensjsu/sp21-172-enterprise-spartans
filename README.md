@@ -12,7 +12,6 @@
 
 ## Online Store
 
-<br><br/>
 Our Starbucks implementation consists of a React front-end which is connected through REST API to the H2 and MySQL databases. The front end design consists of a navigation header, the body based on different screens, and the footer. 
 <br><br/>
 
