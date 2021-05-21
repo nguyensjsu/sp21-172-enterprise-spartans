@@ -121,7 +121,19 @@ Here's a test run of Okta implementation.
 
 <br>
 
-### API Testing 
+### API Testing <br></br>
+Create New Card not activative
+![7](images/7.png)
+Get all cards's information
+![8](images/8.png)
+Active Card to be ready to pay
+![9](images/9.png)
+Create New Order
+![10](images/10.png)
+Paid the Order with the Card we just Activated.
+![11](images/11.png)
+See all Order Information
+![12](images/12.png)
 
 
 
