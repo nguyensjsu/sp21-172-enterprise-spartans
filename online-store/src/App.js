@@ -31,9 +31,9 @@ class App extends Component {
 
   async addOrder(id) {
     const requestOptions = {
-      method: 'post',
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ drink: "Espresso", milk: "Whole", size: "Tall" })
+      body: JSON.stringify({ drink: "Capuccino", milk: "Whole", size: "Tall" })
     };
     const r = await fetch(`/api/order/register/${id}`, requestOptions);
     const body = await r.json();
@@ -44,7 +44,7 @@ class App extends Component {
 
   render() {
 
-    const { orders, results, isLoading } = this.state;
+    const { orders, isLoading } = this.state;
 
     if (isLoading) {
       return <p>Loading...</p>;
@@ -57,11 +57,12 @@ class App extends Component {
             <Route exact path="/">
               <Header></Header>
               {
-                //orders.map(order =>
-                //<div key={order.id}>
-                //  {order.total}
-                //</div>
-                //)
+                // orders.map(order =>
+                // <div key={order.id}>
+                //   {order.total}
+                //   <Button className='item' onClick={() => this.addOrder(1)}>here</Button>
+                // </div>
+                // )
               }
               <Home></Home>
               <Footer></Footer>

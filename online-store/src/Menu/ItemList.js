@@ -1,7 +1,7 @@
 import itemList from './itemList.json';
 import { Link } from 'react-router-dom';
 import Item from './Item.js';
-import Order from './Item.js';
+import Order from './Order.js';
 import './ItemList.css';
 import ArrowForwardIos from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
